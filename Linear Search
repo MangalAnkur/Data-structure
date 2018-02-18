@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<iostream>
+using namespace std;
+int linear_search(int [],int,int);
+int main()
+{int res;
+	int arr[]={7,5,8,23,67,90,56,89};
+	int item=90;
+	res=linear_search(arr,8,item);
+	if(res==1)
+	cout<<"element found";
+	else
+	cout<<"element not found";
+	return 0;
+}
+int linear_search(int L[],int n,int item)
+{
+	int flag=0;
+	int i;
+	for(i=0;i<=n-1;i++)
+	{
+		if(item==L[i])
+		{
+			flag=1;
+		}
+	}
+	return flag;
+}
