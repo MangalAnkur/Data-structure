@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<iostream>
+using namespace std;
+class stackop
+{
+	int top;
+	int stk[30];
+	public:
+		void initialize() 
+		{
+		  top=-1;
+     	}
+		void push();
+		void pop();
+		void display();
+};
+void stackop::push()
+{
+	int val;
+	cout<<"enter the value in stack";
+	cin>>val;
+	stk[++top]=val;
+}
+void stackop::pop()
+{
+	int rmv;
+	rmv=stk[top];
+	top--;
+	cout<<"the element remov from the list is";
+	cout<<rmv;
+	
+}
+void stackop::display()
+{
+	int i;
+	for(i=top;i>=0;i--)
+	{
+		cout<<"elements are";
+		cout<<stk[i];
+	}
+}
+main()
+{
+	stackop ob;
+	ob.initialize();
+	ob.push();
+	ob.push();
+	ob.push();
+	ob.push();
+    ob.display();
+	ob.pop();
+	ob.display();
+	
+}
+
