@@ -1,0 +1,27 @@
+# Data-structure
+implementation of algorithms
+from array import*
+arr=array('i',[])
+n=int(input("Enter num. of elements: "))
+for i in range(n):
+    arr.append(int(input('Enter %d element ' %i)))
+print("Your input is ")
+for i in arr:
+    print(i)
+print()
+print("sortd array is ")
+for i in range(n-1):
+    for j in range(n-i-1):
+        if arr[j]>arr[j+1]:
+            t=arr[j]
+            arr[j]=arr[j+1]
+            arr[j+1]=t
+for i in arr:
+    print(i)
+            
+        
+        
+    
+    
+    
+      
